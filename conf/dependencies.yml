@@ -2,3 +2,5 @@
 
 require:
     - play
+    - play -> siena 2.0.7
+    - org.apache.commons -> commons-lang3 3.1
