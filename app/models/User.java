@@ -19,4 +19,12 @@ public class User extends EnhancedModel
     
     public String email;
     
+    public List<Book> books_owned;
+    public List<Book> books_read;
+    public List<Book> books_wished;
+    
+    public static User findByUsername(String username)
+    {
+    	return User.all().filter("username", username).get();
+    }
 }

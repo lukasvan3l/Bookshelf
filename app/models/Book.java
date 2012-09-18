@@ -8,14 +8,20 @@ import siena.Generator;
 import siena.Id;
 
 /**
- * Owner of a bookshelf
+ * Book with ISBN
  */
 public class Book extends EnhancedModel
 {
+	/**
+	 * primary key
+	 */
     @Id(Generator.NONE)
-    public String id;
-
     public String isbn;
 
     public String name;
+    
+    public static Book FindByISBN(String isbn)
+    {
+    	return findById(isbn);
+    }
 }
