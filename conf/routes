@@ -3,7 +3,8 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+GET     /                                       Marketing.index
+GET		/{username}/boekenplank					UserController.bookshelf
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

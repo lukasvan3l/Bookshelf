@@ -1,0 +1,21 @@
+# you describe your data using the YAML notation here
+# and then load them using Fixtures.load("data.yml")
+
+Book(hobbit):
+  isbn: 1
+  title: The Hobbit
+
+Book(lotr):
+  isbn: 2
+  title: Lord of the Rings
+
+Book(wish):
+  isbn: 3
+  title: The wishing well
+
+User(lukas):
+  email: lukas@3l.com
+  username: lukasvan3l
+  books_owned: [1]
+  books_read: [1,2]
+  books_wished: [3]

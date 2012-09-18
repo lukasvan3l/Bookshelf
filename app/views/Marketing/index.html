@@ -1,0 +1,11 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Boekenplank.nl</h1>
+
+#{list users}
+#{a @UserController.bookshelf(_.username)}Bekijk die van ${_.username}!#{/a}
+#{/list}
+#{else}
+  #{a @Database.create()}Load yml#{/a}
+#{/else}

@@ -6,6 +6,7 @@ import play.modules.siena.EnhancedModel;
 
 import siena.Generator;
 import siena.Id;
+import siena.embed.Embedded;
 
 /**
  * Owner of a bookshelf
@@ -19,9 +20,12 @@ public class User extends EnhancedModel
     
     public String email;
     
-    public List<Book> books_owned;
-    public List<Book> books_read;
-    public List<Book> books_wished;
+    @Embedded
+    public List<String> books_owned;
+    @Embedded
+    public List<String> books_read;
+    @Embedded
+    public List<String> books_wished;
     
     public static User findByUsername(String username)
     {

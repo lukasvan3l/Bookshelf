@@ -18,7 +18,7 @@ public class Book extends EnhancedModel
     @Id(Generator.NONE)
     public String isbn;
 
-    public String name;
+    public String title;
     
     public static Book FindByISBN(String isbn)
     {
