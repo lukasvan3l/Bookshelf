@@ -1,8 +1,7 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<h1>Boekenplank.nl</h1>
-
+<h2>Users:</h2>
 #{list users}
 #{a @UserController.bookshelf(_.username)}Bekijk die van ${_.username}!#{/a}
 #{/list}
