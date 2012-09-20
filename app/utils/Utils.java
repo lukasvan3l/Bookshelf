@@ -7,5 +7,10 @@ public class Utils {
     {
         return (s == null || s.trim().isEmpty());
     }
+ 
+    public static boolean isValidISBN(String s)
+    {
+    	return true;
+    }
     
 }

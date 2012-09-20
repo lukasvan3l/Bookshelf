@@ -16,4 +16,11 @@ public class UserController extends Controller {
         render(user.books_owned, user);
     }
 
+    public static void wishlist(String username) {
+    	User user = User.findByUsername(username);
+    	if (user == null)
+    		Marketing.index();
+        render(user.books_wished, user);
+    }
+
 }

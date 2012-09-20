@@ -5,6 +5,8 @@
 # Home page
 GET     /                                       Marketing.index
 GET		/{username}/boekenplank					UserController.bookshelf
+GET		/{username}/wishlist					UserController.wishlist
+GET		/boek/{isbn}							BookController.book
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

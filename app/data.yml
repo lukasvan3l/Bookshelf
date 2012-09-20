@@ -19,3 +19,7 @@ User(lukas):
   books_owned: [1]
   books_read: [1,2]
   books_wished: [3]
+
+ApiApp(bookshelf):
+  id: bookshelf
+  name: Bookshelf

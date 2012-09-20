@@ -31,4 +31,9 @@ public class User extends EnhancedModel
     {
     	return User.all().filter("username", username).get();
     }
+
+	public void addToBookshelf(String isbn) {
+		books_owned.add(isbn);
+		save();
+	}
 }
