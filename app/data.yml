@@ -2,18 +2,22 @@
 # and then load them using Fixtures.load("data.yml")
 
 Book(hobbit):
-  isbn: 1
+  id: 1
+  isbn13: 9780810910607
   title: The Hobbit
 
 Book(lotr):
-  isbn: 2
+  id: 2
+  isbn13: 9780395647387
   title: Lord of the Rings
 
 Book(wish):
-  isbn: 3
+  id: 3
+  isbn13: 9780864737656
   title: The wishing well
 
 User(lukas):
+  id: 1
   email: lukas@3l.com
   username: lukasvan3l
   books_owned: [1]

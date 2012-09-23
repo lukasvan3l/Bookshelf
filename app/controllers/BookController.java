@@ -17,10 +17,7 @@ public class BookController extends Controller {
 
     	Book book = BookService.getBookInformation(isbn);
     	if (book == null)
-    	{
-    		// TODO: download info from amazon, bol.com or other source
     		notFound();
-    	}
         render(book);
     }
 

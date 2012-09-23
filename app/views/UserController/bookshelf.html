@@ -1,5 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-Boekenplank van:
-${user.username}
+<p>Boekenplank van: ${user.username}</p>
+
+<ul>
+#{list booksOwned}
+	<li><a href="@{BookController.book(_.isbn13)}">${_.title}</a></li>
+#{/list}
+</ul>

@@ -13,7 +13,8 @@ public class UserController extends Controller {
     	User user = User.findByUsername(username);
     	if (user == null)
     		Marketing.index();
-        render(user.books_owned, user);
+    	List<Book> booksOwned = user.getBooksOwned();
+    	render(booksOwned, user);
     }
 
     public static void wishlist(String username) {

@@ -39,8 +39,8 @@ public class Api extends Controller {
     	User user = User.findByUsername(username);
     	if (user == null)
     		notFound();
-    	user.addToBookshelf(isbn);
     	Book book = BookService.getBookInformation(isbn);
+    	user.addToBookshelf(book);
     	renderJSON(book);
     }
     

@@ -2,9 +2,13 @@
 #{set title:'Home' /}
 
 <h2>Users:</h2>
+<ul>
 #{list users}
-#{a @UserController.bookshelf(_.username)}Bekijk die van ${_.username}!#{/a}
+	<li>#{a @UserController.bookshelf(_.username)}Bekijk die van ${_.username}!#{/a}</li>
 #{/list}
 #{else}
-  #{a @Database.create()}Load yml#{/a}
+	<li>#{a @Database.create()}Load yml#{/a}</li>
 #{/else}
+</ul>
+
+<p>#{a @BookController.book('9780439023481')}Haal eentje van de interwebs op#{/a}</p>
